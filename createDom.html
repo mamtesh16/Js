@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: red;">
+    <div class="parent">
+        <div class="child">monday</div>
+        <div class ="child">tuesday</div>
+        <div class="child">wednesday</div>
+        <div class="child">thursday</div>
+    </div>
+</body>
+<script>
+   const m= document.querySelector(".parent")
+    console.log(m);
+    console.log(m.children[0]);// html collectoin 
+// loop
+for (let i = 0; i < m.children.length; i++) {
+    console.log(m.children[i].innerHTML);
+    
+}
+ //console.log(m.children[1].style.color="orange")
+    // console.log;
+    // (m.firstElementChild); 
+    // console.log(m.lastElementChild);
+
+   // reverse is also true , child to parent
+ //  console.log(dayone.nextElementSibling);// moday-> tuesday
+   
+   console.log("nodes :", m.childNodes); 
+   // 0-text,1-div.day, 2-div.day
+   
+</script>
+</html>
