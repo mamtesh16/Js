@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+
+    <title>DOM</title>
+ </head>
+ <body style="background-color: black; color: green;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+ </body>
+<script>
+    function addln(lanName){
+        const li =document.createElement('li')// new element create 
+       li.innerHTML=lanName;// inner html me add karna hai
+       document.querySelector('.language') .//is lang ke ander attach karna hai
+      appendChild(li)
+      }
+       addln("pythan");
+
+       //another method
+function newM(languageName){
+    const li=  document.createElement('li')
+   li.appendChild(document.createTextNode(languageName))
+  document.querySelector('.language').  appendChild(li)
+      }
+      newM('java')
+      // edit
+     const secondlan= document.querySelector("li:nth-child(2)")
+     secondlan.innerHTML="mamtesh"
+     //****another
+    const newli = document.createElement('li')
+    newli.textContent= "mamtesh"
+   secondlan.replaceWith(newli)
+
+   //***************
+    const k =document.querySelector("li:nth-child(1)")
+   const m =document.querySelector('li')
+   m.textContent="kumar"
+   k.replaceWith("abcd")
+   //remove
+    const last=document.querySelector('li:last-child')
+    last.remove()
+</script>
+ </html>
