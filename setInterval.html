@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="mam">start</button>
+    <button id="k">end</button>
+</body>
+<script>
+//     const setI=function(str) {
+//     console.log(str, Date.now);
+    
+//     }
+//   const sa = setInterval(setI,1000,"hello")// other parameter pass
+// clearInterval(sa)// not excute a single line after this
+
+//************
+//  const button=document.getElementById('mam')
+// button.addEventListener('click', function(){
+// console.log("hello",1000,Date.now);
+
+
+// })
+const button=document.getElementById('mam')
+
+
+const m =function(str){
+    console.log(str,Date.now);
+    
+}
+let d;// scope se bhr declare kyoki bhr access nhi ho rha hai
+
+button.addEventListener('click', function(){
+    d =setInterval(m,1000, "hii")
+});
+
+
+const k =document.getElementById('k')
+k.addEventListener('click',function(){
+    clearInterval(d)
+})
+
+
+
+</script>
+</html>
